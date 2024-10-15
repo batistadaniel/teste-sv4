@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#de4ea9" />
+    <link rel="stylesheet" href="src/css/homes.css">
+    <title>Salao Beleza Rápida</title>
+</head>
+
+<body>
+
+    <!-- Cabecalho -->
+    <header id="header">
+        <h1>Beleza Rápida</h1>
+    </header>
+
+    <!-- Area Cliente -->
+    <section id="home" class="ajuste-central">
+
+        <!-- Area Cliente - Menu Principal -->
+        <main id="main-menu" class="main-menu">
+            <button class="btn" onclick="navigate('main-menu')">Cliente</button>
+
+            <button class="btn-opcao" onclick="navigate('criar-agendamento')">Criar novo agendamento</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-agendamentoEdi')">Editar agendamento</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-agendamentoExc')">Excluir agendamento</button>
+
+            <button class="btn-opcao" onclick="navigate('visualizar-agendamento')">Visualizar agendamento</button>
+        </main>
+
+
+        <!-- Area Cliente - criar agendamento -->
+        <main id="criar-agendamento" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Agendamento de Servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome do profissional Ex.: Ana Souza">
+                    <input type="date" name="data" placeholder="Data do serviço Ex.: 25/10/2024">
+                    <input type="time" name="hora" placeholder="Horario do serviço Ex.: 14:30">
+                    <select name="servico" id="servico" placeholder="Serviço a ser realizado:">
+                        <option value="" disabled selected hidden>Serviço a ser realizado:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="servico1">Servico 1</option>
+                        <option value="servico2">Servico 2</option>
+                        <option value="servico3">Servico 3</option>
+                        <option value="servico4">Servico 4</option>
+                        <option value="servico5">Servico 5</option>
+                    </select>
+
+                    <select name="pagamento" id="pagamento" placeholder="Forma de pagamento:">
+                        <option value="" disabled selected hidden>Forma de pagamento:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="pix">PIX</option>
+                        <option value="cartao">Cartao</option>
+                    </select>
+
+
+                    <button type="submit" class="btn-submit">Agendar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Area Cliente - Selecionar editar -->
+        <main id="selecionar-agendamentoEdi" class="hidden main-menu">
+            <select name="selecionar-agendamentoEdit" id="selecionar-agendamento-editar">
+                <option value="" disabled selected hidden>Selecione um agendamento</option>
+                <option value="1">Agendamento 1</option>
+                <option value="2">Agendamento 2</option>
+                <option value="3">Agendamento 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('editar-agendamento', 'selecionar-agendamento-editar', 'agendamento')">Selecionar</button>
+        </main>
+
+        <!-- Area Cliente - Op editar -->
+        <main id="editar-agendamento" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Agendamento de Servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome do profissional Ex.: Ana Souza">
+                    <input type="date" name="data" placeholder="Data do serviço Ex.: 25/10/2024">
+                    <input type="time" name="hora" placeholder="Horario do serviço Ex.: 14:30">
+                    <select name="servico" id="servico" placeholder="Serviço a ser realizado:">
+                        <option value="" disabled selected hidden>Serviço a ser realizado:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="servico1">Servico 1</option>
+                        <option value="servico2">Servico 2</option>
+                        <option value="servico3">Servico 3</option>
+                        <option value="servico4">Servico 4</option>
+                        <option value="servico5">Servico 5</option>
+                    </select>
+
+                    <select name="pagamento" id="pagamento" placeholder="Forma de pagamento:">
+                        <option value="" disabled selected hidden>Forma de pagamento:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="pix">PIX</option>
+                        <option value="cartao">Cartao</option>
+                    </select>
+
+                    <button type="submit" class="btn-submit">Editar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Area Cliente - Selecionar excluir -->
+        <main id="selecionar-agendamentoExc" class="hidden main-menu">
+            <select name="selecionar-agendamentoExcl" id="selecionar-agendamento-excluir">
+                <option value="" disabled selected hidden>Selecione um agendamento</option>
+                <option value="1">Agendamento 1</option>
+                <option value="2">Agendamento 2</option>
+                <option value="3">Agendamento 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('excluir-agendamento', 'selecionar-agendamento-excluir', 'agendamento')">Selecionar</button>
+        </main>
+
+        <!-- Area Cliente - Op excluir -->
+        <main id="excluir-agendamento" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Agendamento de Servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome do profissional Ex.: Ana Souza">
+                    <input type="date" name="data" placeholder="Data do serviço Ex.: 25/10/2024">
+                    <input type="time" name="hora" placeholder="Horario do serviço Ex.: 14:30">
+                    <select name="servico" id="servico" placeholder="Serviço a ser realizado:">
+                        <option value="" disabled selected hidden>Serviço a ser realizado:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="servico1">Servico 1</option>
+                        <option value="servico2">Servico 2</option>
+                        <option value="servico3">Servico 3</option>
+                        <option value="servico4">Servico 4</option>
+                        <option value="servico5">Servico 5</option>
+                    </select>
+
+                    <select name="pagamento" id="pagamento" placeholder="Forma de pagamento:">
+                        <option value="" disabled selected hidden>Forma de pagamento:</option>
+                        <!-- <option value="selecione">-- Selecione</option> -->
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="pix">PIX</option>
+                        <option value="cartao">Cartao</option>
+                    </select>
+
+                    <button type="submit" class="btn-submit">Excluir</button>
+                </div>
+            </form>
+            </form>
+        </main>
+
+        <!-- Area Cliente - Visualizar agendamento -->
+        <main id="visualizar-agendamento" class="hidden main-menu">
+            <h3 class="ttl">Meus agendamentos</h3>
+
+            <button class="btn"
+                onclick="selecionarAgendamentoCli(this, 'Ana Souza', '25/10/2024', '14:30', 'Serviço 1', 'Dinheiro')">Agendamento
+                1</button>
+
+            <button class="btn"
+                onclick="selecionarAgendamentoCli(this, 'Carlos Lima', '26/10/2024', '15:00', 'Serviço 2', 'Cartão')">Agendamento
+                2</button>
+
+            <button class="btn"
+                onclick="selecionarAgendamentoCli(this, 'Maria Oliveira', '27/10/2024', '16:30', 'Serviço 3', 'Pix')">Agendamento
+                3</button>
+        </main>
+
+        <!-- Area Cliente - Descrição agendamento -->
+        <main id="descricao-agendamento" class="hidden main-menu">
+            <h3 class="ttl">Descrição do agendamento: <span id="nome-agendamento"></span></h3>
+            <p id="nome-cliente">Nome do cliente: Ana Souza</p>
+            <p id="data-servico">Data do serviço: 25/10/2024</p>
+            <p id="horario-servico">Horário do serviço: 14:30</p>
+            <p id="servico-realizado">Serviço a ser realizado: Serviço 1</p>
+            <p id="forma-pagamento">Forma de pagamento: Dinheiro</p>
+        </main>
+
+
+
+
+
+    </section>
+
+
+
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

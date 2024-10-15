@@ -1,0 +1,303 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+
+/* Variaveis do arquivo */
+:root {
+    --color-main: #de4ea9;
+    --color-white: #ffffff;
+    --color-btn-1: #48c1a1;
+}
+
+/* Configuracoes padrao da pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Configuracoes da tela de entrada */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+.ttl-E {
+    font-size: 3.5rem;
+    color: var(--color-main);
+    margin-bottom: 50px;
+    font-family: "Jomolhari", serif;
+    letter-spacing: -5px;
+    font-weight: 300;
+}
+
+.entrada-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding-bottom: 70px;
+}
+
+.btn-entrada {
+    display: grid;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 45%;
+    border: none;
+    outline: none;
+}
+
+.btn-entrada:nth-child(1) {
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    background-color: white;
+}
+
+.btn-entrada:nth-child(2) {
+    background-color: var(--color-btn-1);
+    color: white;
+}
+
+.btn-entrar {
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: var(--color-btn-1);
+    color: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+}
+/* Configuracoes da tela de login */
+#login {
+    background-color: #ffffff;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;  
+    & h1 {
+        margin: 36px;
+        font-size: 3.5rem;
+        color: var(--color-main);
+        font-family: "Jomolhari", serif;
+        text-align: center;
+    }
+}
+
+#login form {
+    /* display: flex; */
+    margin-top: 100px;
+    flex-direction: column;
+    width: 360px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.acoes-cadastro {
+    display: flex;
+    flex-direction: row;
+}
+
+.acoes-cadastro  button{
+    width: 100%;
+    padding: 18px 15px;
+    background-color: var(--color-white);
+    border: none;
+    outline: none;
+
+    font-family: "Roboto", sans-serif;
+    color: var(--color-main);
+    font-weight: 700;
+}
+
+input[type=text],[type=password] {
+    margin-bottom: 20px;
+    padding: 18px 15px;
+    border: 1px solid #948f8f;
+    border-radius: 12px;
+    outline: none;
+    width: 100%; 
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.op-entrada {
+    display: grid;
+    text-align: center;
+}
+
+
+/* Configuracoes da tela de cadastro */
+
+#cadastro {
+    background-color: #ffffff;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 100vh;  
+    & h1 {
+        margin: 50px 0;
+        font-size: 3rem;
+        color: var(--color-main);
+        font-family: "Jomolhari", serif;
+        text-align: center;
+        letter-spacing: -5px;
+        font-weight: 300;
+    }
+}
+
+#cadastro form {
+    /* display: flex; */
+    flex-direction: column;
+    width: 360px;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+.acoes {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: var(--color-main);
+    font-weight: 700;
+    & a {
+        text-decoration: none;
+        color: var(--color-main);
+    }
+}
+
+select, input[type=text],[type=password] {
+    margin-bottom: 20px;
+    padding: 18px 15px;
+    border: 1px solid #948f8f;
+    border-radius: 12px;
+    outline: none;
+    width: 100%; 
+    font-size: 18px;
+    /* font-weight: 600; */
+}
+
+.inputs {
+    display: grid;
+    text-align: center;
+}
+
+.inputs button {
+    margin-top: 10px;
+    padding: 18px 15px;
+    width: 100%;
+    background-color: var(--color-btn-1);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.termosEPrivacidade {
+    font-family: "Roboto", sans-serif;
+}
+
+.termosEPrivacidade a {
+    text-decoration: underline;
+    color: var(--color-main);
+}
+
+.termosEPrivacidade a svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-main);
+}
+
+/* .ttl-E {
+    display: flex;
+} */
+
+
+
+/* form {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--color-main);
+    margin-bottom: 50px;
+    font-family: "Jomolhari", serif;
+    letter-spacing: -5px;
+    font-weight: 300;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding-bottom: 70px;
+}
+
+.inputs a {
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 45%;
+}
+
+.inputs a:nth-child(1) {
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    background-color: white;
+}
+
+.inputs a:nth-child(2) {
+    background-color: var(--color-btn-1);
+    color: white;
+} */
+
+.hidden {
+    display: none;
+}

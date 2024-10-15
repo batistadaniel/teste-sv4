@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+:root{
+    --color-main: #de4ea9;
+    --color-white: #ffffff;
+    --color-btn-1: #48c1a1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; 
+    background-color: var(--color-main); 
+}
+
+header {
+    width: 100%;
+    background-color: var(--color-main); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px 0;
+    font-family: "Jomolhari", serif;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+main {
+    position: fixed;
+    top: 80px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px); 
+    background-color: var(--color-white);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow-y: auto; 
+    padding-top: 20px;
+    z-index: 5;
+}
+/* main #menuGeral .usuario {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 100%;
+}
+
+main #menuGeral .itens {
+    padding-top: 30px;
+} */
+
+main #termosEPoliticas h2, h3, h4 {
+    font-family: "Roboto", sans-serif;
+    padding: 0 14px;
+}
+
+#termosEPoliticas {
+    margin-bottom: 60px;
+}
+.termos h4, .politicas h4 {
+    padding: 16px 30px;
+}
+
+
+.linha {
+    display: flex;
+    margin: 15px auto;
+    width: 92%;
+    height: 2px;
+    background-color: black;
+}
+

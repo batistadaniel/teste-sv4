@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#de4ea9" />
+    <link rel="stylesheet" href="src/css/homes.css">
+    <title>Salao Beleza Rápida</title>
+</head>
+
+<body>
+
+    <!-- Cabecalho -->
+    <header id="header">
+        <h1>Beleza Rápida</h1>
+    </header>
+
+    <!-- Area ADM -->
+    <section id="home" class="ajuste-central">
+
+        <!-- Area ADM - Menu Principal -->
+        <main id="main-menu" class="main-menu">
+            <button class="btn" onclick="navigate('main-menu-adms')">Administradores</button>
+            <button class="btn" onclick="navigate('main-menu-funcionarios')">Funcionarios</button>
+            <button class="btn" onclick="navigate('main-menu-clientes')">Clientes</button>
+            <button class="btn" onclick="navigate('main-menu-servicos')">Servicos</button>
+        </main>
+
+
+        <!-- Area ADM - Op adms -->
+        <main id="main-menu-adms" class="hidden main-menu">
+            <button class="btn" onclick="navigate('main-menu-adms')">Administradores</button>
+
+            <button class="btn-opcao" onclick="navigate('criar-administrador')">Criar novo administrador</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-administradorEdi')">Editar administrador</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-administradorExc')">Excluir administrador</button>
+        </main>
+
+        <!-- Area ADM - Op adms - Op criar -->
+        <main id="criar-administrador" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Criar novo administrador</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+
+                    <button class="btn-submit" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op adms - Selecionar editar -->
+        <main id="selecionar-administradorEdi" class="hidden main-menu">
+            <select name="selecionar-administradorEdit" id="selecionar-administrador-editar">
+                <option value="" disabled selected hidden>Selecione um administrador</option>
+                <option value="1">Administrador 1</option>
+                <option value="2">Administrador 2</option>
+                <option value="3">Administrador 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('editar-administrador', 'selecionar-administrador-editar', 'Administrador')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op adms - Op editar -->
+        <main id="editar-administrador" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Editar administrador</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Editar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op adms - Selecionar excluir -->
+        <main id="selecionar-administradorExc" class="hidden main-menu">
+            <select name="selecionar-administradorExcl" id="selecionar-administrador-excluir">
+                <option value="" disabled selected hidden>Selecione um administrador</option>
+                <option value="1">Administrador 1</option>
+                <option value="2">Administrador 2</option>
+                <option value="3">Administrador 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('excluir-administrador', 'selecionar-administrador-excluir', 'Administrador')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op adms - Op excluir -->
+        <main id="excluir-administrador" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Excluir administrador</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Excluir</button>
+                </div>
+            </form>
+        </main>
+
+
+        <!-- Area ADM - Op funcionarios -->
+        <main id="main-menu-funcionarios" class="hidden main-menu">
+            <button class="btn" onclick="navigate('main-menu-funcionarios')">Funcionarios</button>
+
+            <button class="btn-opcao" onclick="navigate('criar-funcionario')">Criar novo funcionario</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-funcionarioEdi')">Editar funcionario</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-funcionarioExc')">Excluir funcionario</button>
+        </main>
+
+        <!-- Area ADM - Op funcionarios - Op criar -->
+        <main id="criar-funcionario" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Criar novo funcionario</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+
+                    <button class="btn-submit" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op funcionarios - Selecionar editar -->
+        <main id="selecionar-funcionarioEdi" class="hidden main-menu">
+            <select name="selecionar-funcionarioEdit" id="selecionar-funcionario-editar">
+                <option value="" disabled selected hidden>Selecione um funcionario</option>
+                <option value="1">Funcionario 1</option>
+                <option value="2">Funcionario 2</option>
+                <option value="3">Funcionario 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('editar-funcionario', 'selecionar-funcionario-editar', 'Funcionario')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op funcionarios - Op editar -->
+        <main id="editar-funcionario" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Editar funcionario</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Editar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op funcionarios - Selecionar excluir -->
+        <main id="selecionar-funcionarioExc" class="hidden main-menu">
+            <select name="selecionar-funcionarioExcl" id="selecionar-funcionario-excluir">
+                <option value="" disabled selected hidden>Selecione um funcionario</option>
+                <option value="1">Funcionario 1</option>
+                <option value="2">Funcionario 2</option>
+                <option value="3">Funcionario 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('excluir-funcionario', 'selecionar-funcionario-excluir', 'Funcionario')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op funcionarios - Op excluir -->
+        <main id="excluir-funcionario" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Excluir funcionario</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Excluir</button>
+                </div>
+            </form>
+        </main>
+
+
+
+        <!-- Area ADM - Op clientes -->
+        <main id="main-menu-clientes" class="hidden main-menu">
+            <button class="btn" onclick="navigate('main-menu-clientes')">Clientes</button>
+
+            <button class="btn-opcao" onclick="navigate('criar-cliente')">Criar cliente</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-clienteEdi')">Editar cliente</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-clienteExc')">Excluir cliente</button>
+        </main>
+
+        <!-- Area ADM - Op clientes - Op criar -->
+        <main id="criar-cliente" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Criar novo cliente</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+
+                    <button class="btn-submit" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op clientes - Selecionar editar -->
+        <main id="selecionar-clienteEdi" class="hidden main-menu">
+            <select name="selecionar-clienteEdit" id="selecionar-cliente-editar">
+                <option value="" disabled selected hidden>Selecione um cliente</option>
+                <option value="1">Cliente 1</option>
+                <option value="2">Cliente 2</option>
+                <option value="3">Cliente 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('editar-cliente', 'selecionar-cliente-editar', 'Cliente')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op clientes - Op editar -->
+        <main id="editar-cliente" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Editar cliente</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Editar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op clientes - Selecionar excluir -->
+        <main id="selecionar-clienteExc" class="hidden main-menu">
+            <select name="selecionar-clienteExcl" id="selecionar-cliente-excluir">
+                <option value="" disabled selected hidden>Selecione um cliente</option>
+                <option value="1">Cliente 1</option>
+                <option value="2">Cliente 2</option>
+                <option value="3">Cliente 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('excluir-cliente', 'selecionar-cliente-excluir', 'Cliente')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op clientes - Op excluir -->
+        <main id="excluir-cliente" class="hidden main-menu">
+            <form>
+                <h3 class="ttl">Excluir cliente</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <button class="btn-submit" type="submit">Excluir</button>
+                </div>
+            </form>
+        </main>
+
+
+        <!-- Area ADM - Op servicos -->
+        <main id="main-menu-servicos" class="hidden main-menu">
+            <button class="btn" onclick="navigate('main-menu-servicos')">Servicos</button>
+
+            <button class="btn-opcao" onclick="navigate('criar-servico')">Criar novo servico</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-servicoEdi')">Editar servico</button>
+
+            <button class="btn-opcao" onclick="navigate('selecionar-servicoExc')">Excluir servico</button>
+        </main>
+
+        <!-- Area ADM - Op servicos - Op criar -->
+        <main id="criar-servico" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Criar novo servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome Ex.: Corte de Cabelo">
+                    <textarea name="" rows="10"
+                        placeholder="Descricao Ex.: Corte de cabelo, incluindo lavagem e finalização."
+                        maxlength="500"></textarea>
+                    <input type="number" name="codigo" placeholder="Codigo Ex.: 001">
+                    <input type="number" name="preco" placeholder="Preco Ex.: R$ 120">
+
+                    <button class="btn-submit" type="submit">Cadastrar servico</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Área ADM - Op servicos - Selecionar editar -->
+        <main id="selecionar-servicoEdi" class="hidden main-menu">
+            <select name="selecionar-servicoEdit" id="selecionar-servico-editar">
+                <option value="" disabled selected hidden>Selecione um servico</option>
+                <option value="1">Servico 1</option>
+                <option value="2">Servico 2</option>
+                <option value="3">Servico 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('editar-servico', 'selecionar-servico-editar', 'Servico')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op servicos - Op editar -->
+        <main id="editar-servico" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Editar servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome Ex.: Corte de Cabelo">
+                    <textarea name="" rows="10"
+                        placeholder="Descricao Ex.: Corte de cabelo, incluindo lavagem e finalização."
+                        maxlength="500"></textarea>
+                    <input type="number" name="codigo" placeholder="Codigo Ex.: 001">
+                    <input type="number" name="preco" placeholder="Preco Ex.: R$ 120">
+
+                    <button class="btn-submit" type="submit">Editar servico</button>
+                </div>
+            </form>
+        </main>
+
+
+        <!-- Área ADM - Op servicos - Selecionar excluir -->
+        <main id="selecionar-servicoExc" class="hidden main-menu">
+            <select name="selecionar-servicoExcl" id="selecionar-servico-excluir">
+                <option value="" disabled selected hidden>Selecione um servico</option>
+                <option value="1">Servico 1</option>
+                <option value="2">Servico 2</option>
+                <option value="3">Servico 3</option>
+            </select>
+            <button class="btn-submit"
+                onclick="selecionar('excluir-servico', 'selecionar-servico-excluir', 'Servico')">Selecionar</button>
+        </main>
+
+        <!-- Área ADM - Op servicos - Op excluir -->
+        <main id="excluir-servico" class="hidden main-menu">
+            <form class="campos">
+                <h3 class="ttl">Excluir servico</h3>
+                <div class="inputs">
+                    <input type="text" name="nome" placeholder="Nome Ex.: Corte de Cabelo">
+                    <textarea name="" rows="10"
+                        placeholder="Descricao Ex.: Corte de cabelo, incluindo lavagem e finalização."
+                        maxlength="500"></textarea>
+                    <input type="number" name="codigo" placeholder="Codigo Ex.: 001">
+                    <input type="number" name="preco" placeholder="Preco Ex.: R$ 120">
+
+                    <button class="btn-submit" type="submit">Excluir servico</button>
+                </div>
+            </form>
+        </main>
+
+    </section>
+
+
+
+
+    <script src="src/js/script.js" defer></script>
+</body>
+
+</html>

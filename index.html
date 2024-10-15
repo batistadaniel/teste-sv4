@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#de4ea9"/>
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Salao Beleza Rápida</title>
+</head>
+<body>
+
+    <!-- Tela de entrada -->
+    <section id="telaEntrada">
+        
+        <!-- Tela de entrada - Logo -->
+        <main class="ttl-E">Beleza Rápida</main>
+
+        <!-- Tela de entrada - Opcoes -->
+        <main id="entrada-menu" class="entrada-menu">
+            <button class="btn-entrada" onclick="navigate('login')">Entrar</button>
+            <button class="btn-entrada" onclick="navigate('cadastro')">Cadastrar</button>
+        </main>
+
+
+        <!-- Tela de entrada - Op login -->
+        <main id="login" class="hidden login">
+            <form >
+                <h1>Beleza Rápida</h1>
+                <div class="op-entrada">
+                    <input type="text" name="email" placeholder="E-mail ou CPF">
+                    <input type="password" name="senha" placeholder="Senha">
+                    
+                    <button class="btn-entrar" type="submit">Entrar</button>
+                </div>
+    
+                <div class="acoes-cadastro">
+
+                    <button >Esqueceu a senha? <br> Recuperar</button>
+                    <button >Não possui cadastro? <br> Cadastre-se</button>
+                </div>
+                <!-- <p>Esqueceu a senha? <a href="recuperacao.php"><br> Recuperar</a></p>
+                <p>Não possui cadastro? <a href="cadastro.php"><br> Cadastre-se</a></p> -->
+        </main>
+
+        <!-- Tela de entrada - Op cadastro -->
+        <main id="cadastro" class="hidden cadastro"> 
+            <form >
+                <h1>Beleza Rápida</h1>
+                <div class="inputs">
+                    <select name="opcoesUsuarios" id="opcoesUsuarios">
+                        <option value="selecione">-- Selecione</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="funcionario">Funcionario</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                    <input type="text" name="nome" placeholder="Nome completo">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="email" placeholder="E-mail">
+                    <input type="password" name="senha" placeholder="Senha">
+    
+                    <div class="termosEPrivacidade">
+                        <p>Ao continuar voce concorda com nossos</p>
+                        <a href="termos.html">Termos de Uso 
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                                <path d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z"></path>
+                                </svg>
+                        </a>
+                        
+                        <a href="termos.html">Politicas de Privacidade
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                                <path d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z"></path>
+                                </svg>
+                        </a>
+                        
+                    </div>
+                    
+
+                    
+                </div>
+            </form>
+        </main>
+
+
+
+
+
+        <!-- <form>
+            <h1>Beleza Rápida</h1>
+            
+            <div class="inputs">
+                <a href="login.html">Entrar</a>
+                <a href="cadastro.html">Cadastrar</a>
+            </div>
+        </form> -->
+    </section>
+
+    <script src="src/js/script.js"></script>
+    <!-- <script src="src/js/homes.js"></script> -->
+</body>
+</html>
